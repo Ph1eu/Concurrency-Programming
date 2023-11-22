@@ -11,6 +11,7 @@ public class MeetAndWorkSynchronization {
             new Thread(new Employee(startSignal, doneSignal, i, taskCount)).start();
         }
         try{
+
             doneSignal.await();
         }catch(InterruptedException e){
         ;   e.printStackTrace();
